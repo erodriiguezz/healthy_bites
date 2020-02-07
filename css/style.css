@@ -8,8 +8,36 @@
     .btn-amber {
         background-color: orange;
         color: white;
+        margin-top: 20px;;
+    }
+
+    .btn-amber:hover {
+        letter-spacing: .01em;
     }
 
     #user-name {
         margin-top: 20px;
+    }
+
+    .btn-brown {
+        background-color: burlywood;
+        color: white;
+        margin-top: 20px;
+    }
+
+    .btn-brown:hover {
+        font-size: x-small;
+    }
+    .alert {
+        float: right;
+    }
+
+    h6 {
+        font-size: x-small;
+        font-style: italic;
+        color:grey;
+    }
+
+    h6:hover {
+        color: black;
     }
