@@ -1,28 +1,37 @@
 $(document).ready(function() {
 
-  var apiKey = "fa1833c9ed3949b897f4d16b77968114";
+  var cuisineChoices = ["italian"];
 
-  var queryURL = "https://api.spoonacular.com/recipes/search?apiKey="+apiKey+"&cuisine=italian-healthy&number=10";
+  var apiKey = "e81687065e9f4a2fbbd8244edf86bffd";
 
-  $.ajax({
-    url: queryURL,
-    method: 'GET'
-  }).then(function(object) {
-    var recepies = object.results;
-    recepies.forEach(function(recepie) {
-      var recepieId = recepie.id;
+  cuisineChoices.forEach(function(cuisine) {
+    var queryURL = "https://api.spoonacular.com/recipes/search?apiKey="+apiKey+"&cuisine="+cuisine+"&number=5";
 
-      getRecepieInformation(recepieId);
+    $.ajax({
+      url: queryURL,
+      method: 'GET'
+    }).then(function(object) {
+      var recepies = object.results;
+      recepies.forEach(function(recepie) {
+        var recepieId = recepie.id;
+
+        getRecepieInformation(recepieId);
+      })
     })
   })
+
 
   function getRecepieInformation(id) {
     $.ajax({
       url:
-        "https://api.spoonacular.com/recipes/" + id + "/information?apiKey="+apiKey+"&includeNutrition=true",
+        "https://api.spoonacular.com/recipes/"+id+"/information?apiKey="+apiKey+"",
       method: "GET"
     }).then(function(object) {
-      console.log(object);
+      var recepieTitle = object.title;
+      var recepieReadyTime = object.readyInMinutes;
+      var recepieLink = object.sourceUrl;
+
+      $(".recepies").append("<h1>"+recepieTitle+"</h1><h3>Ready in "+recepieReadyTime+" minutes.</h3><a href='"+recepieLink+"' target='_blank'>"+recepieLink+"</a>")
     });
   }
 
