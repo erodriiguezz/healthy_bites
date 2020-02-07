@@ -1,1 +1,11 @@
+.fa-1x {
+    font-size: 1.5rem;
+    }
+    .navbar-toggler.toggler-example {
+    cursor: pointer;
+    }
 
+    .btn-amber {
+        background-color: orange;
+        color: white;
+    }
