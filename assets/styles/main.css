@@ -4,7 +4,7 @@
 .navbar-toggler.toggler-example {
     cursor: pointer;
 }
-
+/* 
 .btn-amber {
     background-color: orange;
     color: white;
@@ -13,7 +13,7 @@
 
 .btn-amber:hover {
     letter-spacing: .01em;
-}
+} */
 
 #user-name {
     margin-top: 20px;
@@ -47,3 +47,15 @@ h6:hover {
     bottom: 30px;
     right: 50px;
 }
+
+.recipe-title {
+    font-weight: lighter;
+
+}
+
+.page-header {
+    font-weight: lighter;
+    letter-spacing: .1em;
+    color: black;
+}
+
