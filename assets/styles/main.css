@@ -127,6 +127,7 @@ nav .nav-contianer .nav-items ul li a {
   text-decoration: none;
   font-size: 22px;
   color: #000;
+  font-weight: lighter;
 }
 nav .nav-contianer .nav-items ul li a:hover {
   text-decoration: underline;
@@ -139,6 +140,14 @@ nav .nav-contianer .nav-items ul li a:hover {
   100% {
     top: 45%;
   }
+}
+footer {
+  background-color: #ececec;
+}
+footer h5 {
+  font-size: 16px;
+  text-align: center;
+  padding: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */
