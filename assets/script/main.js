@@ -38,58 +38,52 @@ $(document).ready(function() {
 
   //Zomato
   var zomatoKey = "bc6a01f25d2bf75572f717781b034f8c";
-  var getCity = "miami";
+  var getCity = "chicago";
 
   $.ajax({
-    url: "",
+    url: "https://developers.zomato.com/api/v2.1/cities?user-key="+zomatoKey+"&q="+getCity+"&count=1",
     method: "GET",
     headers: {
       "user-key": zomatoKey
     }
-  }).then(function(zomato){
+  }).then(function(city){
+    console.log(city);
+    var cities = city.location_suggestions;
 
+    cities.forEach(function(location) {
+      $(".choose-city")
+        .html(
+          $("<h2 class='location-name'>"+location.name+"</h2>")
+            .on('click', function() {
+              var cityId = location.id;
+              City(cityId);
+            })
+        );
+      
+    });
   });
+  function City(city){
+    var qZomato = "healthy";
+    // 1 = delivery / 5 = Takeaway / 6 = Cafes / 7 = Daily menus / 8 = breakfast / 9 = lunch / 10 = dinner / 13 = Pocket Friendly Delivery
+    var categoryZomato = ["1", "5", "6", "7", "8", "9", "10", "11", "13"];
+    var sortZomato = ["rating", "cost", "real_distance"];
 
-
-
-
-
-
-
-
-
-  // $.ajax({
-  //   url: "https://developers.zomato.com/api/v2.1/cities?user-key="+zomatoKey+"&q="+getCity,
-  //   method: "GET",
-  //   headers: {
-  //     "user-key": zomatoKey
-  //   }
-  // }).then(function(city){
-  //   console.log(city);
-  //   var cities = city.location_suggestions;
-
-  //   cities.forEach(function(location) {
-  //     $(".choose-city")
-  //       .append(
-  //         $("<h3>"+location.name+"</h3>")
-  //           .on('click', function() {
-  //             var cityId = location.id;
-  //             cuisineCity(cityId);
-  //           })
-  //       );
-      
-  //   });
-  // });
-  // function cuisineCity(cuisineList){
-  //   $.ajax({
-  //     url: "https://developers.zomato.com/api/v2.1/cuisines?user-key="+zomatoKey+"&city_id="+cuisineList,
-  //     method: "GET",
-  //     headers: {
-  //       "user-key": zomatoKey
-  //     }
-  //   }).then(function(cuisines) {
-  //     console.log(cuisines)
-      
-  //   });
-  // };
+    $.ajax({
+      url: "https://developers.zomato.com/api/v2.1/search?user-key="+zomatoKey+"&entity_id="+city+"&entity_type=city&q="+qZomato+"&count=20&category="+categoryZomato[8]+"&sort="+sortZomato[0],
+      method: "GET",
+      headers: {
+        "user-key": zomatoKey
+      }
+    }).then(function(zomato){
+      console.log(zomato);
+      var rName = zomato.restaurants
+      rName.forEach(function(obj){
+        var name = obj.restaurant.name;
+        var time = obj.restaurant.timings;
+        var cuisines = obj.restaurant.cuisines
+        var address = obj.restaurant.location.address;
+        $(".choose-city").append("<ul><h4>"+name+"</h4><li>Business Hours: "+time+"</li><li>Cuisines: "+cuisines+"</li><li>Address: "+address);
+      });
+    });
+    };
 });
