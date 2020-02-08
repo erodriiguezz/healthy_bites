@@ -12,10 +12,6 @@
   margin-top: 20px;
 }
 
-.btn-amber:hover {
-  letter-spacing: 0.01em;
-}
-
 #user-name {
   margin-top: 20px;
 }
@@ -109,3 +105,19 @@ nav .nav-contianer ul li a:hover {
 }
 
 /*# sourceMappingURL=main.css.map */
+/* =======
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+} */
+
+.recipe-title {
+    font-weight: lighter;
+
+}
+
+.page-header {
+    font-weight: lighter;
+    letter-spacing: .1em;
+    color: black;
+}
