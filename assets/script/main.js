@@ -38,7 +38,7 @@ $(document).ready(function() {
 
   //Zomato
   var zomatoKey = "bc6a01f25d2bf75572f717781b034f8c";
-  var getCity = "chicago";
+  var getCity = "Chicago";
 
   $.ajax({
     url: "https://developers.zomato.com/api/v2.1/cities?user-key="+zomatoKey+"&q="+getCity+"&count=1",
@@ -69,7 +69,7 @@ $(document).ready(function() {
     var sortZomato = ["rating", "cost", "real_distance"];
 
     $.ajax({
-      url: "https://developers.zomato.com/api/v2.1/search?user-key="+zomatoKey+"&entity_id="+city+"&entity_type=city&q="+qZomato+"&count=20&category="+categoryZomato[8]+"&sort="+sortZomato[0],
+      url: "https://developers.zomato.com/api/v2.1/search?user-key="+zomatoKey+"&entity_id="+city+"&entity_type=city&q="+qZomato+"&count=10&category="+categoryZomato[8]+"&sort="+sortZomato[0],
       method: "GET",
       headers: {
         "user-key": zomatoKey
@@ -82,7 +82,7 @@ $(document).ready(function() {
         var time = obj.restaurant.timings;
         var cuisines = obj.restaurant.cuisines
         var address = obj.restaurant.location.address;
-        $(".choose-city").append("<ul><h4>"+name+"</h4><li>Business Hours: "+time+"</li><li>Cuisines: "+cuisines+"</li><li>Address: "+address);
+        $(".choose-city").append("<div class='restaurant-list'><ul><h4>"+name+"</h4><li>Business Hours: "+time+"</li><li>Cuisines: "+cuisines+"</li><li>Address: "+address+"</li></div>");
       });
     });
     };
