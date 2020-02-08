@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   var cuisineChoices = ["italian"];
 
-  var apiKey = "e81687065e9f4a2fbbd8244edf86bffd";
+  var apiKey = "8544414fb5dc4affa404017b0544e7f8";
 
   cuisineChoices.forEach(function(cuisine) {
     var queryURL = "https://api.spoonacular.com/recipes/search?apiKey="+apiKey+"&cuisine="+cuisine+"&number=5";
@@ -12,8 +12,9 @@ $(document).ready(function() {
       method: 'GET'
     }).then(function(object) {
       var recepies = object.results;
-      recepies.forEach(function(recepie) {
-        var recepieId = recepie.id;
+      recepies.forEach(function(recipe) {
+        var recepieId = recipe.id;
+        console.log(recipe);
 
         getRecepieInformation(recepieId);
       })

@@ -1,52 +1,115 @@
 .fa-1x {
-    font-size: 1.5rem;
-}
-.navbar-toggler.toggler-example {
-    cursor: pointer;
-}
-/* 
-.btn-amber {
-    background-color: orange;
-    color: white;
-    margin-top: 20px;;
+  font-size: 1.5rem;
 }
 
-.btn-amber:hover {
-    letter-spacing: .01em;
-} */
+.navbar-toggler.toggler-example {
+  cursor: pointer;
+}
+
+.btn-amber {
+  background-color: orange;
+  color: white;
+  margin-top: 20px;
+}
 
 #user-name {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .btn-brown {
-    background-color: burlywood;
-    color: white;
-    margin-top: 20px;
+  background-color: burlywood;
+  color: white;
+  margin-top: 20px;
 }
 
 .btn-brown:hover {
-    font-size: x-small;
+  font-size: x-small;
 }
+
 .alert {
-    float: right;
+  float: right;
 }
 
 h6 {
-    font-size: x-small;
-    font-style: italic;
-    color:grey;
+  font-size: x-small;
+  font-style: italic;
+  color: grey;
 }
 
 h6:hover {
-    color: black;
+  color: black;
 }
 
 .give-me-recepies-bttn {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+}
+
+/* ernesto code */
+body {
+  margin-top: 150px;
+}
+
+nav {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+nav .nav-contianer {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 10%;
+  align-items: center;
+}
+nav .nav-contianer h1 {
+  font-size: 25px;
+  font-weight: lighter;
+  letter-spacing: 0.1em;
+}
+nav .nav-contianer .menu-bttn {
+  display: inline-block;
+  cursor: pointer;
+}
+nav .nav-contianer .menu-bttn .bar1,
+nav .nav-contianer .menu-bttn .bar2 {
+  width: 30px;
+  height: 1px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+nav .nav-contianer .menu-bttn.clicked .bar1 {
+  transform: rotate(-40deg) translate(0px, 5px);
+}
+nav .nav-contianer .menu-bttn.clicked .bar2 {
+  transform: rotate(40deg) translate(0px, -5px);
+}
+nav .nav-contianer ul {
+  list-style-type: none;
+  text-align: center;
+  display: none;
+}
+nav .nav-contianer ul li {
+  padding: 10px;
+}
+nav .nav-contianer ul li a {
+  text-decoration: none;
+  font-size: 22px;
+  color: #000;
+}
+nav .nav-contianer ul li a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=main.css.map */
+/* =======
     position: absolute;
     bottom: 30px;
     right: 50px;
-}
+} */
 
 .recipe-title {
     font-weight: lighter;
@@ -58,4 +121,3 @@ h6:hover {
     letter-spacing: .1em;
     color: black;
 }
-

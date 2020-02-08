@@ -1,0 +1,120 @@
+.fa-1x {
+  font-size: 1.5rem;
+}
+.navbar-toggler.toggler-example {
+  cursor: pointer;
+}
+
+.btn-amber {
+  background-color: orange;
+  color: white;
+  margin-top: 20px;
+}
+
+.btn-amber:hover {
+  letter-spacing: 0.01em;
+}
+
+#user-name {
+  margin-top: 20px;
+}
+
+.btn-brown {
+  background-color: burlywood;
+  color: white;
+  margin-top: 20px;
+}
+
+.btn-brown:hover {
+  font-size: x-small;
+}
+.alert {
+  float: right;
+}
+
+h6 {
+  font-size: x-small;
+  font-style: italic;
+  color: grey;
+}
+
+h6:hover {
+  color: black;
+}
+
+.give-me-recepies-bttn {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+}
+
+/* ernesto code */
+
+body {
+  margin-top: 150px;
+}
+
+nav {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+
+  .nav-contianer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10%;
+    align-items: center;
+
+    h1 {
+      font-size: 25px;
+      font-weight: lighter;
+      letter-spacing: .1em;
+    }
+
+    .menu-bttn {
+      display: inline-block;
+      cursor: pointer;
+
+      .bar1,
+      .bar2 {
+        width: 30px;
+        height: 1px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+
+      &.clicked {
+        .bar1 {
+          transform: rotate(-40deg) translate(-0px, 5px);
+        }
+
+        .bar2 {
+          transform: rotate(40deg) translate(-0px, -5px);
+        }
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      text-align: center;
+      display: none;
+
+      li {
+        padding: 10px;
+
+        a {
+          text-decoration: none;
+          font-size: 22px;
+          color: #000;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
