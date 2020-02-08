@@ -141,5 +141,13 @@ nav .nav-contianer .nav-items ul li a:hover {
     top: 45%;
   }
 }
+footer {
+  background-color: #ececec;
+}
+footer h5 {
+  font-size: 16px;
+  text-align: center;
+  padding: 30px;
+}
 
 /*# sourceMappingURL=main.css.map */
