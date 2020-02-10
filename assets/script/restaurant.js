@@ -3,7 +3,7 @@ $(document).ready(function() {
   var zomatoKey = "bc6a01f25d2bf75572f717781b034f8c";
 
   //Click submit to search for city
-  $("#submit").one("click", function() {
+  $("#submitBtn").one("click", function() {
     var getCity = $("#inputCity").val();
     $.ajax({
       url:
@@ -64,15 +64,15 @@ $(document).ready(function() {
           var rating = obj.restaurant.user_rating.aggregate_rating;
           var address = obj.restaurant.location.address;
           $(".zomato").append(
-            "<div class='restaurant-list'><h4>" +
+            "<div class='restaurant-list'><h4 class='rName'>" +
               name +
-              "</h4><ul><li>Rating: " +
+              "</h4><ul><li class='rList'>Rating: " +
               rating +
-              "</li><li>Business Hours: " +
+              "</li><li class='rList'>Business Hours: " +
               time +
-              "</li><li>Cuisines: " +
+              "</li><li class='rList'>Cuisines: " +
               cuisines +
-              "</li><li>Address: " +
+              "</li><li class='rList'>Address: " +
               address +
               "</li></div>"
           );
