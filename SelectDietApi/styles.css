@@ -2,11 +2,23 @@
   border: solid 1px black;
   background-color: rgb(97, 96, 96, 0.7);
 }
-.col-12 {
+
+body > div > div.row > div:nth-child(1) {
+  padding: 0px;
+}
+
+body > div > div.row > div:nth-child(2) {
+  padding: 0px;
+}
+body > div > div.row > div:nth-child(4) {
+  padding: 0px;
+}
+body > div > div.row > div:nth-child(5) {
+  padding: 0px;
 }
 
 p {
-  border: solid 1.5px rgb(243, 180, 7);
+  /*border: solid 1.5px rgb(243, 180, 7);*/
   align-items: center;
   background-color: blueviolet;
 
