@@ -1,0 +1,14 @@
+.container {
+  border: solid 1px black;
+  background-color: rgb(97, 96, 96, 0.7);
+}
+.col-12 {
+}
+
+p {
+  border: solid 1.5px rgb(243, 180, 7);
+  align-items: center;
+  background-color: blueviolet;
+
+  text-align: center;
+}
