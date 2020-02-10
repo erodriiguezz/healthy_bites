@@ -44,7 +44,7 @@ $(document).ready(function() {
       var parent =
         '<div class="row align-items-center"><div class="col-lg-5 col-xl-4"><div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4"><img class="img-fluid" src=' +
         recipeImage +
-        ' alt="Sample image"></div></div><div class="col-lg-7 col-xl-8"><h4 class= "mb-3" id="recipe-title">' +
+        ' alt="Sample image"></div></div><div class="col-lg-7 col-xl-8"><h4 class= "mb-3" id="recipe-title" style="text-transform:capitalize;">' +
         recipeTitle +
         '</h4><p class="time-ready">Ready in ' +
         recipeReadyTime +
