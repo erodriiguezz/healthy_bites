@@ -1,38 +1,58 @@
 $(document).ready(function() {
-
   var cuisineChoices = ["italian"];
 
   var apiKey = "8544414fb5dc4affa404017b0544e7f8";
 
   cuisineChoices.forEach(function(cuisine) {
-    var queryURL = "https://api.spoonacular.com/recipes/search?apiKey="+apiKey+"&cuisine="+cuisine+"&number=5";
+    var queryURL =
+      "https://api.spoonacular.com/recipes/search?apiKey=" +
+      apiKey +
+      "&cuisine=" +
+      cuisine +
+      "&number=2";
 
     $.ajax({
       url: queryURL,
-      method: 'GET'
+      method: "GET"
     }).then(function(object) {
       var recepies = object.results;
       recepies.forEach(function(recipe) {
         var recepieId = recipe.id;
-        console.log(recipe);
 
         getRecepieInformation(recepieId);
-      })
-    })
-  })
-
+      });
+    });
+  });
 
   function getRecepieInformation(id) {
     $.ajax({
       url:
-        "https://api.spoonacular.com/recipes/"+id+"/information?apiKey="+apiKey+"",
+        "https://api.spoonacular.com/recipes/" +
+        id +
+        "/information?apiKey=" +
+        apiKey +
+        "",
       method: "GET"
     }).then(function(object) {
-      var recepieTitle = object.title;
-      var recepieReadyTime = object.readyInMinutes;
-      var recepieLink = object.sourceUrl;
+      var recipeTitle = object.title;
+      var recipeReadyTime = object.readyInMinutes;
+      var recipeLink = object.sourceUrl;
+      var recipeImage = object.image;
 
-      $(".recepies").append("<h1>"+recepieTitle+"</h1><h3>Ready in "+recepieReadyTime+" minutes.</h3><a href='"+recepieLink+"' target='_blank'>"+recepieLink+"</a>")
+      console.log(object);
+
+      var parent =
+        '<div class="row align-items-center"><div class="col-lg-5 col-xl-4"><div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4"><img class="img-fluid" src=' +
+        recipeImage +
+        ' alt="Sample image"></div></div><div class="col-lg-7 col-xl-8"><h4 class= "mb-3" id="recipe-title">' +
+        recipeTitle +
+        '</h4><p class="time-ready">Ready in ' +
+        recipeReadyTime +
+        "min</p><a href=" +
+        recipeLink +
+        ' class="btn btn-amber">Read more</a></div></div><hr class="my-5"></hr>';
+
+      $(".recipe-list").append(parent);
     });
   }
 });
