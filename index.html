@@ -26,6 +26,7 @@
     />
     <!-- Optional CSS -->
     <link rel="stylesheet" href="assets/styles/main.css" />
+    <link rel="stylesheet" href="assets/styles/nutrition.css" />
 
     <title>Healthy Bites</title>
   </head>
@@ -33,7 +34,7 @@
   <body>
     <nav>
       <div class="nav-contianer">
-        <h1>HEALTHY BITES</h1>
+        <h1><a href="#">HEALTHY BITES</a></h1>
 
         <div class="nav-bttn">
           <div class="bar1"></div>
@@ -42,9 +43,9 @@
 
         <div class="nav-items">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="pages/recepies.html">Get Recipes</a></li>
-            <li><a href="#about">About</a></li>
+            <li class="nav-link"><a href="pages/survey.html">Customize</a></li>
+            <li class="nav-link"><a href="pages/recepies.html">Recipes</a></li>
+            <li class="nav-link"><a href="pages/restaurants.html">Restaurants</a></li>
           </ul>
         </div>
       </div>
@@ -83,6 +84,91 @@
         </div>
       </section>
     </div>
+
+
+
+
+    <!-- jhonny's code  -->
+    <div class="contain">
+      <div class="row">
+        <div class="col-3">
+          <img
+            src="./assets/images/UL.png"
+            alt=""
+            class="upperleft"
+            style=" width:150;height:150px; float: right;  "
+          />
+        </div>
+        <div class="col-2 ">
+          <img
+            src="./assets/images/ur.png"
+            alt=""
+            class="upperright"
+
+            style=" width: 144px;height:138px; float:left; margin-top: 12.5px;"
+          />
+        </div>
+        <div class="col-6">
+          <img
+            src="./assets/images/carbs.jpg"
+            alt=""
+            class="goodCarbs"
+            style="position:absolute; top:50px; left: 20px; z-index: -20; height: 0px"
+          />
+          <img
+            src="./assets/images/protein.png"
+            alt=""
+            class="goodProtein"
+            style="position:absolute; top:50px; left: 20px; z-index: -20; height: 0px"
+          />
+          <img
+            src="./assets/images/balanced.jpg"
+            alt=""
+            class="balanced"
+            style="position:absolute; top:50px; left: 20px; z-index: -20; height: 0px"
+          />
+          <img
+            src="./assets/images/fat.png"
+            alt=""
+            class="goodFat"
+            style="position:absolute; top:50px; left: 20px; z-index: -20; height: 0px;"
+          />
+        </div>
+
+        <div class="col-3 ">
+          <img
+            src="./assets/images/BL.png"
+            alt=""
+            class="leftdown"
+            style=" width:150;height:150px; float: right; "
+          />
+        </div>
+        <div class="col-2 ">
+          <img
+            src="./assets/images/BR.png"
+            alt=""
+            class="rightdown"
+            style=" width:150;height:150px; float:left;  "
+          />
+        </div>
+        <div class="col-3"
+        ><div class="nutValues" >
+          <h4 class="title"></h4>
+          <p class="facts">
+
+          </p>
+          <h6 class="benefits"></h6>
+          <p class="dietbenefits"></p>
+          <h6 class="ouroptions"></h6>
+          <p class="typeone"></p>
+          <p class="typetwo"></p>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+
 
     <!--features section-->
     <div class="container mt-5 px-5 pt-5 pb-3" id="about">
@@ -177,6 +263,7 @@
   <!-- Optinal JS -->
   <script type="text/javascript" src="assets/script/main.js"></script>
   <script type="text/javascript" src="assets/script/style.js"></script>
+  <script type="text/javascript" src="assets/script/diet.js"></script>
 </body>
 
 </html>
