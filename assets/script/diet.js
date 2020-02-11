@@ -4,8 +4,12 @@ var balDiet = $(".balanced");
 var fatDiet = $(".goodFat");
 var nutInfo = $(".nutValues");
 
+$(".title").on("mouseenter", function() {
+  $(".title").text("Becoming Healthier is your Choice");
+});
+
 $(".upperleft").on("click ", function() {
-  carbDiet.animate({ width: "300px" });
+  carbDiet.animate({ width: "200px" });
   proDiet.animate({ width: "0px" });
   balDiet.animate({ width: "0px" });
   fatDiet.animate({ width: "0px" });
@@ -29,7 +33,7 @@ $(".upperleft").on("mouseleave", function() {
 });
 
 $(".upperright").on("click ", function() {
-  proDiet.animate({ width: "300px" });
+  proDiet.animate({ width: "200px" });
   carbDiet.animate({ width: "0px" });
 
   balDiet.animate({ width: "0px" });
@@ -54,7 +58,7 @@ $(".upperright").on("mouseleave", function() {
 });
 
 $(".leftdown").on("click ", function() {
-  balDiet.animate({ width: "300px" });
+  balDiet.animate({ width: "200px" });
   carbDiet.animate({ width: "0px" });
   proDiet.animate({ width: "0px" });
   fatDiet.animate({ width: "0px" });
@@ -77,12 +81,12 @@ $(".leftdown").on("mouseleave", function() {
 });
 
 $(".rightdown").on("click ", function() {
-  fatDiet.animate({ width: "300px" });
+  fatDiet.animate({ width: "200px" });
   balDiet.animate({ width: "0px" });
   carbDiet.animate({ width: "0px" });
   proDiet.animate({ width: "0px" });
 
-  $(".title").text("Fat Diet");
+  $(".title").text("The Fat Tactic");
   $(".facts").text(
     "Fats are one of the three main macronutrients, along with carbohydrates and proteins."
   );

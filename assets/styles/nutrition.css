@@ -9,13 +9,14 @@ p {
 }
 
 .uu {
-  margin-top: -90px;
-  margin-left: 70px;
+  margin-top: -80px;
+  margin-left: 85px;
 }
 
 .b {
   margin-left: 65px;
 }
+
 .c {
   margin-left: 65px;
 }
@@ -48,6 +49,18 @@ body > div > div.row > div:nth-child(4) {
 }
 body > div > div.row > div:nth-child(5) {
   padding: 0px;
+}
+
+.tt {
+  background-color: hsl(43, 89%, 38%, 0.06);
+  border-bottom-left-radius: 75%;
+  border-top-right-radius: 80%;
+}
+.as {
+  background-color: hsl(240, 100%, 27%, 0.05);
+
+  border-bottom-right-radius: 90%;
+  border-top-left-radius: 75%;
 }
 
 /* p {
