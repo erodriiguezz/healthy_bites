@@ -1,11 +1,9 @@
 $(document).ready(function() {
-  var clicked = false;
-
   $(".nav-bttn").click(function() {
     toggleClasses();
   });
 
-  $(".nav-items li a").click(function() {
+  $(".nav-link").click(function() {
     toggleClasses();
   });
 
