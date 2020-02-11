@@ -1,7 +1,11 @@
-.container {
+p {
+  margin: 0 auto;
+}
+
+/* .container {
   border: solid 1px black;
   background-color: rgb(97, 96, 96, 0.7);
-}
+} */
 
 body > div > div.row > div:nth-child(1) {
   padding: 0px;
@@ -17,10 +21,10 @@ body > div > div.row > div:nth-child(5) {
   padding: 0px;
 }
 
-p {
+/* p {
   /*border: solid 1.5px rgb(243, 180, 7);*/
-  align-items: center;
+  /* align-items: center;
   background-color: blueviolet;
 
   text-align: center;
-}
+} */ */

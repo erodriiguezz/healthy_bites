@@ -1,9 +1,6 @@
 .fa-1x {
   font-size: 1.5rem;
 }
-.navbar-toggler.toggler-example {
-  cursor: pointer;
-}
 
 .btn-amber {
   background-color: orange;
@@ -78,6 +75,10 @@ nav {
       font-size: 25px;
       font-weight: lighter;
       letter-spacing: 0.1em;
+
+      a {
+        color: #000;
+      }
     }
 
     .nav-bttn {
@@ -106,11 +107,11 @@ nav {
 
     .nav-items {
       opacity: 0;
-      position: absolute;
-
+      display: none;
 
       &.show {
         opacity: 1;
+        display: block;
         background: #fff;
         position: fixed;
         top: 100px;
@@ -136,6 +137,12 @@ nav {
         list-style-type: none;
 
         li {
+          &.active {
+            a {
+              text-decoration: underline;
+            }
+          }
+
           a {
             text-decoration: none;
             font-size: 22px;
@@ -161,7 +168,6 @@ nav {
     top: 45%;
   }
 }
-
 
 footer {
   background-color: #ececec;
