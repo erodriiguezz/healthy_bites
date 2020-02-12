@@ -4,15 +4,19 @@ var balDiet = $(".balanced");
 var fatDiet = $(".goodFat");
 var nutInfo = $(".nutValues");
 
+$(".title").on("mouseenter", function() {
+  $(".title").text("Becoming Healthier is your Choice");
+});
+
 $(".upperleft").on("click ", function() {
-  carbDiet.animate({ height: "400px" });
-  proDiet.animate({ height: "0px" });
-  balDiet.animate({ height: "0px" });
-  fatDiet.animate({ height: "0px" });
+  carbDiet.animate({ width: "200px" });
+  proDiet.animate({ width: "0px" });
+  balDiet.animate({ width: "0px" });
+  fatDiet.animate({ width: "0px" });
 
   $(".title").text("The Carb Way");
   $(".facts").text(
-    "Proteins are essential nutrients for the human body. They are one of the building blocks of body tissue and can also serve as a fuel source."
+    " Carbs are the sugars, starches and fibers found in fruits, grains, vegetables and dairy."
   );
   $(".benefits").text("Health Impact");
   $(".dietbenefits").text("Energy  & Stamina ");
@@ -21,16 +25,23 @@ $(".upperleft").on("click ", function() {
   $(".typetwo").text("Low Carbs");
 });
 
-$(".upperright").on("click ", function() {
-  proDiet.animate({ height: "400px" });
-  carbDiet.animate({ height: "0px" });
+$(".upperleft").on("mouseenter", function() {
+  $(".upperleft").attr("src", "./assets/images/1.png");
+});
+$(".upperleft").on("mouseleave", function() {
+  $(".upperleft").attr("src", "./assets/images/UL.png");
+});
 
-  balDiet.animate({ height: "0px" });
-  fatDiet.animate({ height: "0px" });
+$(".upperright").on("click ", function() {
+  proDiet.animate({ width: "200px" });
+  carbDiet.animate({ width: "0px" });
+
+  balDiet.animate({ width: "0px" });
+  fatDiet.animate({ width: "0px" });
 
   $(".title").text("Protein Based");
   $(".facts").text(
-    "Proteins are essential nutrients for the human body. They are one of the building blocks of body tissue and can also serve as a fuel source."
+    "Proteins are one of the building blocks of body tissue and can also serve as a fuel source."
   );
   $(".benefits").text("Health Impact");
   $(".dietbenefits").text("Build muscle mass and tissue");
@@ -39,15 +50,22 @@ $(".upperright").on("click ", function() {
   $(".typetwo").text("Low Protein");
 });
 
+$(".upperright").on("mouseenter", function() {
+  $(".upperright").attr("src", "./assets/images/2.png");
+});
+$(".upperright").on("mouseleave", function() {
+  $(".upperright").attr("src", "./assets/images/ur.png");
+});
+
 $(".leftdown").on("click ", function() {
-  balDiet.animate({ height: "400px" });
-  carbDiet.animate({ height: "0px" });
-  proDiet.animate({ height: "0px" });
-  fatDiet.animate({ height: "0px" });
+  balDiet.animate({ width: "200px" });
+  carbDiet.animate({ width: "0px" });
+  proDiet.animate({ width: "0px" });
+  fatDiet.animate({ width: "0px" });
 
   $(".title").text("Balanced Route");
   $(".facts").text(
-    "A healthy diet is a diet that helps to maintain or improve overall health. Provides the body with essential nutrition: fluid, macronutrients, micronutrients, and adequate calories."
+    "Provides the essential nutrition for a healthy nutritional equilibrium."
   );
   $(".benefits").text("Health Impact");
   $(".dietbenefits").text("Improve Health");
@@ -55,13 +73,20 @@ $(".leftdown").on("click ", function() {
   $(".typeone").text("Balanced Alternative");
 });
 
-$(".rightdown").on("click ", function() {
-  fatDiet.animate({ height: "400px" });
-  balDiet.animate({ height: "0px" });
-  carbDiet.animate({ height: "0px" });
-  proDiet.animate({ height: "0px" });
+$(".leftdown").on("mouseenter", function() {
+  $(".leftdown").attr("src", "./assets/images/3.png");
+});
+$(".leftdown").on("mouseleave", function() {
+  $(".leftdown").attr("src", "./assets/images/BL.png");
+});
 
-  $(".title").text("Fat Diet");
+$(".rightdown").on("click ", function() {
+  fatDiet.animate({ width: "200px" });
+  balDiet.animate({ width: "0px" });
+  carbDiet.animate({ width: "0px" });
+  proDiet.animate({ width: "0px" });
+
+  $(".title").text("The Fat Tactic");
   $(".facts").text(
     "Fats are one of the three main macronutrients, along with carbohydrates and proteins."
   );
@@ -70,4 +95,12 @@ $(".rightdown").on("click ", function() {
   $(".ouroptions").text("Our Recepies Selections");
   $(".typeone").text("High Fat");
   $(".typetwo").text("Low Fat");
+});
+
+$(".rightdown").on("mouseenter", function() {
+  $(".rightdown").attr("src", "./assets/images/4.png");
+});
+
+$(".rightdown").on("mouseleave", function() {
+  $(".rightdown").attr("src", "./assets/images/BR.png");
 });
