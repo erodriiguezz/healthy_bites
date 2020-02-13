@@ -3,7 +3,7 @@ $(document).ready(function() {
   var zomatoKey = "bc6a01f25d2bf75572f717781b034f8c";
 
   //Click submit to search for city
-  $("#submitBtn").one("click", function() {
+  $("#submitBtn").on("click", function() {
     var getCity = $("#inputCity").val();
     $.ajax({
       url:
@@ -17,7 +17,6 @@ $(document).ready(function() {
         "user-key": zomatoKey
       }
     }).then(function(city) {
-      console.log(city);
       var cities = city.location_suggestions;
 
       cities.forEach(function(location) {
@@ -38,10 +37,14 @@ $(document).ready(function() {
       var sortZomato = ["rating", "cost", "real_distance"];
 
       $(".zomato").html(
-        "<div>Click on food type<div><input id='querySearch' type='text' placeholder='Vegen' /> <input type='submit' id='querySubmit' /></div></div><div class='restaurants'></div>"
+        "<div>Click on food type<div>" +
+          "<input class='querySearch' type='checkbox' name='vegan' value='vegan' /><label for='vegan'>Vegan</label>" +
+          "<input class='querySearch' type='checkbox' name='vegetarian' value='Vegetarian' /><label for='vegetarian'>Vegetarian</label>" +
+          "<input class='querySearch' type='checkbox' name='glutenFree' value='gluten free' /><label for='glutenFree'>Gluten Free</label>" +
+          " <input type='submit' id='querySubmit' /></div></div><div class='restaurants'></div>"
       );
       $("#querySubmit").on("click", function() {
-        var qZomato = $("#querySearch").val();
+        var qZomato = $("input:checked").val();
         $(".restaurants").empty();
 
         $.ajax({
@@ -61,7 +64,6 @@ $(document).ready(function() {
             "user-key": zomatoKey
           }
         }).then(function(zomato) {
-          console.log(zomato);
           var rName = zomato.restaurants;
           rName.forEach(function(obj) {
             var name = obj.restaurant.name;

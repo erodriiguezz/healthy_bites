@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var cuisineChoices = ["italian"];
 
-  var apiKey = "dd6f14eabf1f4a19b0e9f58ae66df8f8";
+  var apiKey = "f51f43db9a904bf9bac0877357b19006";
 
   cuisineChoices.forEach(function(cuisine) {
     var queryURL =
