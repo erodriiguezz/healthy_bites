@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var cuisineChoices = ["italian"];
 
-  var apiKey = "c53a73e96cba4a028509d4ecead45543";
+  var apiKey = "f51f43db9a904bf9bac0877357b19006";
 
   cuisineChoices.forEach(function(cuisine) {
     var queryURL =
@@ -48,7 +48,7 @@ $(document).ready(function() {
         recipeTitle +
         '</h4><p class="time-ready">Ready in ' +
         recipeReadyTime +
-        "min</p><a href=" +
+        "min</p><a target='_blank' href=" +
         recipeLink +
         ' class="btn btn-amber">Read more</a></div></div><hr class="my-5"></hr>';
 
