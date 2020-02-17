@@ -28,6 +28,7 @@
 
   <!-- Optional CSS -->
   <link rel="stylesheet" href="../assets/styles/main.css" />
+  <link rel="stylesheet" href="../assets/styles/survey.css"/>
 
   <title>Healthy Recipe</title>
 </head>
@@ -54,126 +55,96 @@
     </div>
   </nav>
 
-  <!--Get Started- Welcome-->
-  <div class="container my-5 py-5 z-depth-1">
-    <!--Section: Content-->
-    <section class="px-md-5 mx-md-5 dark-grey-text text-center text-lg-left">
-      <!--Grid row-->
-      <div class="row">
-        <!--Grid column-->
-        <div class="col-lg-6 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
-          <img src="../assets/images/survey.jpg" class="img-fluid" alt="" />
-        </div>
-        <!--Grid column-->
+  <!-- multistep form -->
+<form id="msform">
+  <!-- progressbar -->
+  <ul id="progressbar">
+    <li class="active">Create Account</li>
+    <li>Select a Cuisine:</li>
+    <li>Select a Diet:</li>
+    <li>Select any Intolerances:</li>
+    <li>Exclude:</li>
+  </ul>
+  <!-- fieldsets -->
+  <fieldset>
+    <h2 class="fs-title">Create an account</h2>
+  
+    <input type="text" name="name" placeholder="Name" />
+    <input type="text" name="email" placeholder="Email" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
 
-        <!--Grid column-->
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <h3 class="font-weight-bold">You're on the right path!</h3>
+  <fieldset>
+    <h2 class="fs-title">Select a Cuisine</h2>
+    
+    <button class="cuisine">African</button>
+    <br>
+    <button class="cuisine">American</button>
+    <br>
+    <button class="cuisine">British</button>
+    <br>
+    <button class="cuisine">Cajun</button>
+    <br>
+    <button class="cuisine">Caribbean</button>
+    <br>
+    <button class="cuisine">Chinese</button>
+    <br>
+    
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
 
-          <br />
+  <fieldset>
+    <h2 class="fs-title">Select a Diet</h2>
 
-          <input type="text" style="width: 100%;" id="user-name" placeholder="let's get your name.." />
-          <br />
-          <input type="text" style="width: 100%;" id="user-email" placeholder="email" />
-          <br />
-          <h6>We won't share your information with anyone.</h6>
-          <button type="button" class="btn btn-amber" id="submit-name">
-            Take me to the next step!
-          </button>
-        </div>
-        <!--Grid column-->
-      </div>
-      <!--Grid row-->
-    </section>
-  </div>
+    <button class="diet">vegetarian</button>
+    <br>
+    <button class="diet">gluten free</button>
+    <br>
+    <button class="diet">vegan</button>
+    <br>
+    <button class="diet">ketogenic</button>
+    <br>
+    <button class="diet">lacto-vegetarian</button>
+    <br>
+    <button class="diet">ovo-vegetarian</button>
+    <br>
+    <button class="diet">pesceterian</button>
+    <br>
+    <button class="diet">paleo</button>
+    <br>
+    <button class="diet">primal</button>
+    <br>
+    <button class="diet">whole30</button>
+    <br>
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
 
+  <fieldset>
+    <h2 class="fs-title">Select any Intolerances</h2>
 
-  <!-- Vertical Steppers -->
-  <div class="row mt-1">
-    <div class="col-md-12">
+    <button class="intolerance">Dairy</button>
+    <br>
+    <button class="intolerance">Peanut</button>
+    <br>
+    <button class="intolerance">Shellfish</button>
+    <br>
+    <button class="intolerance">Grain</button>
+    <br>
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
 
-      <!-- Stepers Wrapper -->
-      <ul class="stepper stepper-vertical">
+  <fieldset>
+    <h2 class="fs-title">Tell us what to exclude</h2>
 
-        <!-- First Step -->
-        <li class="completed">
-          <a href="#!">
-            <span class="circle">1</span>
-            <span class="label">Diet</span>
-          </a>
-          <div class="step-content grey lighten-3">
-            <button id="diet-all">All</button>
-            <button id="diet-balanced">Balanced</button>
-            <button id="diet-highprotein">High-Protein</button>
-            <button id="diet-highfiber">High-Fiber</button>
-            <button id="diet-lowfat">Low Fat</button>
-            <button id="diet-lowcarb">Low Carb</button>
-            <button id="diet-lowsodium">Low Sodium</button>
-          </div>
-        </li>
-
-        <!-- Second Step -->
-        <li class="active">
-          <a href="#!">
-            <span class="circle">2</span>
-            <span class="label">Meal Type</span>
-          </a>
-
-          <div class="step-content grey lighten-3">
-            <button id="type-breakfast">Breakfast</button>
-            <button id="type-lunch">Lunch</button>
-            <button id="type-dinner">Dinner</button>
-            <button id="type-snacks">Snacks</button>
-          </div>
-        </li>
-
-        <!-- Third Step -->
-        <li class="active">
-          <a href="#!">
-            <span class="circle">3</span>
-            <span class="label">Cuisines</span>
-          </a>
-          <div class="cuisine step-content grey lighten-3"  diet-type">
-            <button id="american">American</button>
-            <button id="asian">Asian</button>
-            <button id="vegan">Vegan</button>
-            <button id="vegetarian">Vegetarian</button>
-            <br>
-            <br>
-            <button id="mexican">Mexican</button>
-            <button id="thai">Thai</button>
-            <button id="indian">Indian</button>
-            <button id="chinese">Chinese</button>
-            <button id="mediterranean">Mediterranean</button>
-            <button id="italian">Italian</button>
-          </div>
-        </li>
-
-        <!-- Fourth Step -->
-        <li class="active">
-          <a href="#!">
-            <span class="circle">4</span>
-            <span class="label">Exclude:</span>
-          </a>
-          <div class="step-content grey lighten-3">
-            <input type="string" id="exclude"></input>
-          </div>
-        </li>
-
-      </ul>
-      <!-- /.Stepers Wrapper -->
-
-    </div>
-  </div>
-
-  <!-- Steppers Navigation -->
-  <div class="row mt-1">
-    <div class="col-md-12 text-right">
-      <button class="btn btn-flat btn-sm">Cancel</button>
-      <button class="btn btn-primary btn-sm">Next</button>
-    </div>
-  </div>
-  <!-- /.Vertical Steppers -->
+    <input type="text" placeholder="shellfish" />
+    <br>
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="submit" name="submit" class="submit action-button" value="Submit" />
+  </fieldset>
+</form>
 
 
   <!-- JQuery CDN -->
@@ -194,6 +165,8 @@
   <!-- Optinal JS -->
   <script type="text/javascript" src="../assets/script/main.js"></script>
   <script type="text/javascript" src="../assets/script/style.js"></script>
+  <script type="text/javascript" src="../assets/script/survey.js"></script>
+  
 </body>
 
 </html>
