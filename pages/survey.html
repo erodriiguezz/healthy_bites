@@ -1,172 +1,218 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.11.0/css/mdb.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Font Awesome -->
-  <link
-  rel="stylesheet"
-  href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-/>
-<!-- Google Fonts -->
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-/>
-<!-- Bootstrap core CSS -->
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
-  rel="stylesheet"
-/>
-<!-- Material Design Bootstrap -->
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.11.0/css/mdb.min.css"
-  rel="stylesheet" />
+    <!-- Optional CSS -->
+    <link rel="stylesheet" href="../assets/styles/main.css" />
+    <link rel="stylesheet" href="../assets/styles/survey.css" />
 
+    <title>Healthy Recipe</title>
+  </head>
 
-  <!-- Optional CSS -->
-  <link rel="stylesheet" href="../assets/styles/main.css" />
-  <link rel="stylesheet" href="../assets/styles/survey.css"/>
+  <body>
+    <nav>
+      <div class="nav-contianer">
+        <h1><a href="../index.html">HEALTHY BITES</a></h1>
 
-  <title>Healthy Recipe</title>
-</head>
+        <div class="nav-bttn">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+        </div>
 
-<body>
-  <nav>
-    <div class="nav-contianer">
-      <h1><a href="../index.html">HEALTHY BITES</a></h1>
-
-      <div class="nav-bttn">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
+        <div class="nav-items">
+          <ul>
+            <li class="nav-link"><a href="#">Customize</a></li>
+            <li class="nav-link"><a href="recepies.html">Recipes</a></li>
+            <li class="nav-link">
+              <a href="restaurants.html">Restaurants</a>
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
 
-      <div class="nav-items">
-        <ul>
-          <li class="nav-link"><a href="#">Customize</a></li>
-          <li class="nav-link"><a href="recepies.html">Recipes</a></li>
-          <li class="nav-link">
-            <a href="restaurants.html">Restaurants</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <!-- multistep form -->
+    <form id="msform">
+      <!-- <div class="form-container"> -->
+      <!-- progressbar -->
+      <!-- <ul id="progressbar">
+        <li class="active">Create Account</li>
+        <li>Select a Cuisine:</li>
+        <li>Select a Diet:</li>
+        <li>Select any Intolerances:</li>
+        <li>Exclude:</li>
+      </ul> -->
+      <!-- fieldsets -->
+      <!-- <fieldset>
+        <h2 class="fs-title">Create an account</h2>
 
-  <!-- multistep form -->
-<form id="msform">
-  <!-- progressbar -->
-  <ul id="progressbar">
-    <li class="active">Create Account</li>
-    <li>Select a Cuisine:</li>
-    <li>Select a Diet:</li>
-    <li>Select any Intolerances:</li>
-    <li>Exclude:</li>
-  </ul>
-  <!-- fieldsets -->
-  <fieldset>
-    <h2 class="fs-title">Create an account</h2>
-  
-    <input type="text" name="name" placeholder="Name" />
-    <input type="text" name="email" placeholder="Email" />
-    <input type="button" name="next" class="next action-button" value="Next" />
-  </fieldset>
+        <input type="text" name="name" placeholder="Name" />
+        <input type="text" name="email" placeholder="Email" />
+        <input
+          type="button"
+          name="next"
+          class="next action-button"
+          value="Next"
+        />
+      </fieldset> -->
 
-  <fieldset>
-    <h2 class="fs-title">Select a Cuisine</h2>
-    
-    <button class="cuisine">African</button>
-    <br>
-    <button class="cuisine">American</button>
-    <br>
-    <button class="cuisine">British</button>
-    <br>
-    <button class="cuisine">Cajun</button>
-    <br>
-    <button class="cuisine">Caribbean</button>
-    <br>
-    <button class="cuisine">Chinese</button>
-    <br>
-    
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <input type="button" name="next" class="next action-button" value="Next" />
-  </fieldset>
+      <fieldset>
+        <h2 class="fs-title">Select a Cuisine</h2>
 
-  <fieldset>
-    <h2 class="fs-title">Select a Diet</h2>
+        <div class="user-options">
+          <a class="option-bttn cuisine">African</a>
+          <a class="option-bttn cuisine">American</a>
+          <a class="option-bttn cuisine">British</a>
+          <a class="option-bttn cuisine">Cajun</a>
+          <a class="option-bttn cuisine">Caribbean</a>
+          <a class="option-bttn cuisine">Chinese</a>
+        </div>
 
-    <button class="diet">vegetarian</button>
-    <br>
-    <button class="diet">gluten free</button>
-    <br>
-    <button class="diet">vegan</button>
-    <br>
-    <button class="diet">ketogenic</button>
-    <br>
-    <button class="diet">lacto-vegetarian</button>
-    <br>
-    <button class="diet">ovo-vegetarian</button>
-    <br>
-    <button class="diet">pesceterian</button>
-    <br>
-    <button class="diet">paleo</button>
-    <br>
-    <button class="diet">primal</button>
-    <br>
-    <button class="diet">whole30</button>
-    <br>
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <input type="button" name="next" class="next action-button" value="Next" />
-  </fieldset>
+        <!-- <input
+            type="button"
+            name="previous"
+            class="previous action-button"
+            value="Previous"
+          /> -->
+        <input
+          type="button"
+          name="next"
+          class="next action-button"
+          value="Next"
+        />
+      </fieldset>
 
-  <fieldset>
-    <h2 class="fs-title">Select any Intolerances</h2>
+      <fieldset>
+        <h2 class="fs-title">Select a Diet</h2>
 
-    <button class="intolerance">Dairy</button>
-    <br>
-    <button class="intolerance">Peanut</button>
-    <br>
-    <button class="intolerance">Shellfish</button>
-    <br>
-    <button class="intolerance">Grain</button>
-    <br>
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <input type="button" name="next" class="next action-button" value="Next" />
-  </fieldset>
+        <div class="user-options">
+          <a class="option-bttn diet">vegetarian</a>
+          <a class="option-bttn diet">gluten free</a>
+          <a class="option-bttn diet">vegan</a>
+          <a class="option-bttn diet">ketogenic</a>
+          <a class="option-bttn diet">lacto-vegetarian</a>
+          <a class="option-bttn diet">ovo-vegetarian</a>
+          <a class="option-bttn diet">pesceterian</a>
+          <a class="option-bttn diet">paleo</a>
+          <a class="option-bttn diet">primal</a>
+          <a class="option-bttn diet">whole30</a>
+        </div>
 
-  <fieldset>
-    <h2 class="fs-title">Tell us what to exclude</h2>
+        <input
+          type="button"
+          name="previous"
+          class="previous action-button"
+          value="Previous"
+        />
+        <input
+          type="button"
+          name="next"
+          class="next action-button"
+          value="Next"
+        />
+      </fieldset>
 
-    <input type="text" placeholder="shellfish" />
-    <br>
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <input type="submit" name="submit" class="submit action-button" value="Submit" />
-  </fieldset>
-</form>
+      <fieldset>
+        <h2 class="fs-title">Select any Intolerances</h2>
+        <div class="user-options">
+          <a class="option-bttn intolerance">Dairy</a>
+          <a class="option-bttn intolerance">Peanut</a>
+          <a class="option-bttn intolerance">Shellfish</a>
+          <a class="option-bttn intolerance">Grain</a>
+        </div>
 
+        <input
+          type="button"
+          name="previous"
+          class="previous action-button"
+          value="Previous"
+        />
+        <input
+          type="button"
+          name="next"
+          class="next action-button"
+          value="Next"
+        />
+      </fieldset>
 
-  <!-- JQuery CDN -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <fieldset>
+        <h2 class="fs-title">Tell us what to exclude</h2>
 
-  <!-- JQuery -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!-- JQuery -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.11.0/js/mdb.min.js"></script>
+        <input type="text" />
+        <br />
+        <input
+          type="button"
+          name="previous"
+          class="previous action-button"
+          value="Previous"
+        />
+        <input
+          type="submit"
+          name="submit"
+          class="submit action-button"
+          value="Submit"
+        />
+      </fieldset>
+      <!-- </div> -->
+    </form>
 
+    <div class="container mt-5 recipes"></div>
 
-  <!-- Optinal JS -->
-  <script type="text/javascript" src="../assets/script/main.js"></script>
-  <script type="text/javascript" src="../assets/script/style.js"></script>
-  <script type="text/javascript" src="../assets/script/survey.js"></script>
-  
-</body>
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!-- JQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    ></script>
+    <!-- JQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    ></script>
+    <!-- Bootstrap tooltips -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+    ></script>
+    <!-- Bootstrap core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"
+    ></script>
+    <!-- MDB core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.11.0/js/mdb.min.js"
+    ></script>
+
+    <!-- Optinal JS -->
+    <script type="text/javascript" src="../assets/script/main.js"></script>
+    <script type="text/javascript" src="../assets/script/style.js"></script>
+    <script type="text/javascript" src="../assets/script/survey.js"></script>
+  </body>
 </html>
