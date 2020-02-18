@@ -21,13 +21,14 @@ $(document).ready(function() {
 
       cities.forEach(function(location) {
         $(".zomato").html(
-          $("<h2 class='location-name'>" + location.name + "</h2>").on(
-            "click",
-            function() {
-              var cityId = location.id;
-              City(cityId);
-            }
-          )
+          $(
+            "<h5 class='choose-location'>Click on your location</h5><br><h2 class='location-name'>" +
+              location.name +
+              "</h2>"
+          ).on("click", function() {
+            var cityId = location.id;
+            City(cityId);
+          })
         );
       });
     });
@@ -37,12 +38,17 @@ $(document).ready(function() {
       var sortZomato = ["rating", "cost", "real_distance"];
 
       $(".zomato").html(
-        "<div>Click on food type<div>" +
-          "<input class='querySearch' type='checkbox' name='vegan' value='vegan' /><label for='vegan'>Vegan</label>" +
-          "<input class='querySearch' type='checkbox' name='vegetarian' value='Vegetarian' /><label for='vegetarian'>Vegetarian</label>" +
-          "<input class='querySearch' type='checkbox' name='glutenFree' value='gluten free' /><label for='glutenFree'>Gluten Free</label>" +
-          " <input type='submit' id='querySubmit' /></div></div><div class='restaurants'></div>"
+        "<div class='dietTypes'><h4>Choose a diet type</h4><div class='inputDiets'>" +
+          "<label for='vegan'>Vegan<input class='querySearch' id='vegan' type='radio' name='diet' value='vegan' /></label>" +
+          "<label for='vegetarian'>Vegetarian<input class='querySearch' id='vegetarian' type='radio' name='diet' value='Vegetarian' /></label> " +
+          "<label for='glutenFree'>Gluten Free<input class='querySearch' id='glutenFree' type='radio' name='diet' value='gluten-free' /></label> " +
+          "<label for='alcoholFree'>Alcohol Free<input class='querySearch' id='alcoholFree' type='radio' name='diet' value='alcohol-free' /></label> " +
+          "<label for='dairyFree'>Dairy Free<input class='querySearch' id='dairyFree' type='radio' name='diet' value='dairy-free' /></label><br>" +
+          "<button type='submit' class='btn btn-dark' id='querySubmit'>Submit</button><button type='submit' class='btn btn-dark' id='startOver'>Start Over</button></div></div><div class='restaurants'></div>"
       );
+      $("#startOver").on("click", function() {
+        location.reload(true);
+      });
       $("#querySubmit").on("click", function() {
         var qZomato = $("input:checked").val();
         $(".restaurants").empty();
@@ -64,6 +70,7 @@ $(document).ready(function() {
             "user-key": zomatoKey
           }
         }).then(function(zomato) {
+          console.log(zomato);
           var rName = zomato.restaurants;
           rName.forEach(function(obj) {
             var name = obj.restaurant.name;
@@ -71,10 +78,13 @@ $(document).ready(function() {
             var cuisines = obj.restaurant.cuisines;
             var rating = obj.restaurant.user_rating.aggregate_rating;
             var address = obj.restaurant.location.address;
+            var url = obj.restaurant.url;
             $(".restaurants").append(
-              "<div class='restaurant-list'><h4 class='rName'>" +
+              "<div class='restaurant-list'><a href='" +
+                url +
+                "' target='_blank' alt='Review page'><h4 class='rName'>" +
                 name +
-                "</h4><ul><li class='rList'>Rating: " +
+                "</h4></a><ul><li class='rList'>Rating: " +
                 rating +
                 "</li><li class='rList'>Business Hours: " +
                 time +

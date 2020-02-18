@@ -28,10 +28,7 @@
     <link rel="stylesheet" href="../assets/styles/main.css" />
 
     <!-- Optional CSS -->
-    <link rel="stylesheet" href="../assets/styles/main.css" />
-
-    <!-- Optional CSS -->
-    <link rel="stylesheet" href="../assets/styles/main.css" />
+    <link rel="stylesheet" href="../assets/styles/restaurants.css" />
 
     <title>Restaurants</title>
   </head>
@@ -58,16 +55,22 @@
       </div>
     </nav>
 
-    <div class="zomato">
-      <div class="search">
-        Search for your city
-        <div>
-          <input type="text" id="inputCity" placeholder="New York City" />
-          <input type="submit" id="submitBtn" />
+    <div class="container">
+      <div class="zomato">
+        <div class="search">
+          <h4>Search for your city</h4>
+          <div>
+            <input
+              type="text"
+              class="form-control"
+              id="inputCity"
+              placeholder="New York City"
+            />
+            <input type="submit" class="btn btn-dark" id="submitBtn" />
+          </div>
         </div>
       </div>
     </div>
-
     <!-- JQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 

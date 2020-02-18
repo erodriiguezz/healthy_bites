@@ -1,0 +1,29 @@
+.search {
+  text-align: center;
+}
+.location-name {
+  text-align: center;
+  cursor: pointer;
+}
+.location-name:hover {
+  color: gray;
+}
+.rName {
+  color: black;
+}
+.rName:hover {
+  color: gray;
+}
+.dietTypes {
+  text-align: center;
+}
+
+.btn {
+  width: 150px;
+}
+.querySearch {
+  margin: 0px 10px 0px 5px;
+}
+.choose-location {
+  text-align: center;
+}
