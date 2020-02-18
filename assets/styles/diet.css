@@ -1,0 +1,14 @@
+body {
+}
+
+.p {
+  display: inline-block;
+}
+
+li {
+  display: inline-block;
+}
+
+h3 {
+  background-color: blue;
+}
