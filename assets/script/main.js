@@ -4,33 +4,67 @@
 // 3. intolerances
 // 4. excludeIngredients
 
-
 $(document).ready(function() {
   var apiKey = "8557eea839474a91b42ffff0d93d21d0";
 
   // default user input values
-  var cuisine = "Chinese";
-  var diet = "vegetarian";
-  var intolerances = "Peanut";
+  var cuisine = "";
+  var diet = "";
+  var intolerances = "";
   var exclude = "";
 
   // update default user input values
   $(".cuisine").click(function() {
     cuisine = $(this).text();
-  })
+    $(this).addClass("clicked");
+    $(this)
+      .siblings()
+      .removeClass("clicked");
+    $(this)
+      .parent()
+      .parent()
+      .addClass("clicked");
+  });
 
   $(".diet").click(function() {
     diet = $(this).text();
-  })
+    $(this).addClass("clicked");
+    $(this)
+      .siblings()
+      .removeClass("clicked");
+    $(this)
+      .parent()
+      .parent()
+      .addClass("clicked");
+  });
 
   $(".intolerance").click(function() {
     intolerances = $(this).text();
-  })
+    $(this).addClass("clicked");
+    $(this)
+      .siblings()
+      .removeClass("clicked");
+    $(this)
+      .parent()
+      .parent()
+      .addClass("clicked");
+  });
 
   // on search button click search recepies
-  $(".search").click(function() {
+  $(".submit").click(function() {
+    $("#msform").hide(); // hide questionaire
+
     // spoonacular api url
-    var queryURL = "https://api.spoonacular.com/recipes/search?apiKey="+apiKey+"&cuisine="+cuisine+"&diet="+diet+"&intolerances="+intolerances+"&number=2";
+    var queryURL =
+      "https://api.spoonacular.com/recipes/search?apiKey=" +
+      apiKey +
+      "&cuisine=" +
+      cuisine +
+      "&diet=" +
+      diet +
+      "&intolerances=" +
+      intolerances +
+      "&number=2";
     // &excludeIngredients="+exclude+"
 
     if (cuisine && diet && intolerances) {
@@ -48,12 +82,10 @@ $(document).ready(function() {
           getRecipeInformation(recipeId);
         });
       });
+    } else {
+      alert("Fill all inputs");
     }
-
-    else {
-      alert('Fill all inputs');
-    }
-  })
+  });
 
   function getRecipeInformation(id) {
     $.ajax({
@@ -84,5 +116,4 @@ $(document).ready(function() {
       $(".recipes").append(parent);
     });
   }
-
 });
