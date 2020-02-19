@@ -1,59 +1,23 @@
-# Project 1
+# Healthy Bites
 
-## Application Requirements
+## Description
 
-* Must use at least two server-side APIs
+Healthy Bites is a web application that generates recipes based on culinary and dietary preferences and it also provides a restaurant search based on user input.
 
-* Must use a CSS framework _other than_ Bootstrap
+## Vision
 
-* Must be interactive (i.e: accept and respond to user input)
+Future releases of Healthy Bites will include:
 
-* Use at least one new third-party API
+- Ability for users to create an account and store their favorite recipes
 
-* Must have a polished UI
+- Ability for users to pull ingredients from recipes and store in a grocery list
 
-* Must meet good quality coding standards
+- Healthier options on home page will link to protein, plant, fat or carb based meals respectively
 
-* Does not use alerts, confirms or prompts (look into _modals_)
+## Interface
 
-* Must be deployed to GitHub Pages
+![interface](assets/interface.png)
 
+## Deployed App
 
-## Presentation Requirements
-
-Use this [project presentation template](https://docs.google.com/presentation/d/1_u8TKy5zW5UlrVQVnyDEZ0unGI2tjQPDEpA0FNuBKAw/edit?usp=sharing) to address the following: 
-
-* Elevator pitch: a one minute description of your application
-
-* Concept: What is your user story? What was your motivation for development?
-
-* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
-
-* Demo: Show your stuff!
-
-* Directions for Future Development
-
-* Links to the deployed application and the GitHub repository
-
-
-## Grading Metrics 
-
-| Metric        | Weight | 
-| ---           | ---    |
-| Concept       | 10%    |
-| Design        | 20%    |
-| Functionality | 30%    |
-| Collaboration | 30%    |
-| Presentation  | 10%    |
-
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository
-
-
-
+You can find our app [here](https://erodrigueztoimil.github.io/healthy_bites/)
