@@ -1,0 +1,37 @@
+body {
+}
+
+.p {
+  display: inline-block;
+}
+
+li {
+  display: inline-block;
+}
+
+h5 {
+  padding: 0px;
+  margin-top: 0px;
+}
+.col-4 {
+  width: 210px;
+  padding: 10px;
+  display: inline-block;
+  border: solid 0.5px orange;
+  border-radius: 9%;
+  text-align: center;
+}
+img {
+  border-radius: 9%;
+}
+a {
+  text-decoration: none;
+  color: orange;
+}
+a:hover {
+  color: rgb(192, 106, 0);
+  font-weight: 700;
+}
+h6 {
+  margin: 0px;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Document</title>
+        <link rel="stylesheet" href="../assets/styles/diet.css" />
+  </head>
+  <body>
+    <h2>Quick Results by Diet Orientation</h2>
+
+   
+    <br />
+    <h4>Carb Diet Recepies<sup>Landing Target</sup><sup>Beta Tested and missing CSS + Orbanization</sup></h1>
+    <p>
+   Eating well is fundamental to good health and well-being. Healthy eating helps us to maintain a healthy weight and
+   reduces our risk of type 2 diabetes, high blood pressure, high cholesterol and the risk of developing cardiovascular
+   disease and some cancers.</p>
+
+
+    <div class="container">
+     <div class="row">
+      
+      <div class ="col-3 p" style="display: inline-block;">
+       <img src="https://res-5.cloudinary.com/sharecare/image/upload/c_fill,f_auto,g_faces:center,h_340,w_600/v1487172637/slideshows/colorful-recipes-to-boost-your-health-slide-01" alt="" width="150px" >
+        <div></div><button id="hcdiet">High Carb</button></div>
+       
+        
+        <div clas ="col-3 p" style="display:inline-block;">
+         <img
+          src="https://i.dietdoctor.com/wp-content/uploads/2018/01/LowCarbMobile.jpg?auto=compress%2Cformat&w=1200&h=709&fit=crop" width="150px"
+          alt="">
+
+          <div>
+         <button id="lcdiet">Low Carb</button>
+         </div>
+       
+
+       </div>
+       </div>
+     </div>
+    </div>
+   
+
+    <p></p><img src="" ></img></p>
+    
+   <div>
+    <p id="results"></p>
+    <div id="list"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+
+      $(document).ready(function() {
+       var lowCarbs = [
+          "sirloin",
+          "eggs",
+          "salmon",
+          "brocolli",
+          "yogurt", 
+          "fruits",
+          "rice",
+          "vegetables",
+         "wheat",
+        ];
+
+         $(lowCarbs.slice(0,5)).each(function (i, item) {
+
+        $("#lcdiet").on("click", function() {
+          var search = item;
+          var apiKey = "941ba2d36d5029ddabc2f06718bb1611";
+          var apiId = "8caae292";
+
+          $.ajax({
+            url:
+              "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" +
+              search +
+              "&from=0&to=3&app_id=" +
+              apiId +
+              "&app_key=" +
+              apiKey,
+            method: "GET"
+          }).then(function(response) {
+            console.log(response)
+            /*console.log(response);
+            $("#results").text(response.hits[0].recipe.url);
+            $("img").attr("src", response.hits[1].recipe.image);
+            console.log(response.hits[0].recipe.label);
+            console.log(response.hits[0].recipe.ingredients);
+            console.log(response.hits[0].recipe.dietLabels);
+            console.log(response.hits[0].recipe.url);
+            console.log(response.hits[0]);
+            console.log(response.hits);*/
+
+            var fra = response.hits;
+
+            $(fra).each(function(i, item) {
+
+             var t = item.recipe.image;
+
+             $("#list").append("<div class='col-4' style='display:inline-block;'><a target='_blank' href='"+ item.recipe.url +"'><h5>"+item.recipe.label+"</h5></a><img src='" + t + "'style='width: 200px'><h6>"+item.recipe.healthLabels[0]+"</h6></div> ");
+            });
+          });
+        });
+      });
+     });
+
+      $(document).ready(function() {
+     
+        var highCarbs =["quinoa",
+       "lentil", "chickpea", "beans", "pasta", "banana", "oats" ];
+
+        $(highCarbs.slice(0,5)).each(function (i, item) {
+
+        $("#hcdiet").on("click", function() {
+          var search = item;
+          var apiKey = "941ba2d36d5029ddabc2f06718bb1611";
+          var apiId = "8caae292";
+
+          $.ajax({
+            url:
+              "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" +
+              search +
+              "&from=0&to=3&app_id=" +
+              apiId +
+              "&app_key=" +
+              apiKey,
+            method: "GET"
+          }).then(function(response) {
+
+            console.log(response)
+            /*console.log(response);
+            $("#results").text(response.hits[0].recipe.url);
+            $("img").attr("src", response.hits[1].recipe.image);
+            console.log(response.hits[0].recipe.label);
+            console.log(response.hits[0].recipe.ingredients);
+            console.log(response.hits[0].recipe.dietLabels);
+            console.log(response.hits[0].recipe.url);
+            console.log(response.hits[0]);
+            console.log(response.hits);*/
+
+            var fra = response.hits;
+
+            $(fra).each(function(i, item) {
+
+             var t = item.recipe.image;
+
+
+             $("#list").append("<div class ='col-2' style='display:inline-block;>"+"<a target='_blank' href='"+ item.recipe.url +"'><h5>" +item.recipe.label + "</h5></a><img src='"+t+"'style='width: 200px'></div> ");
+
+            });
+          });
+        });
+      });
+     });
+    </script>
+  </body>
+</html>
