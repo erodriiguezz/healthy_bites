@@ -20,9 +20,6 @@ $(".upperleft").on("click ", function() {
   );
   $(".benefits").text("Health Impact");
   $(".dietbenefits").text("Energy  & Stamina ");
-  $(".ouroptions").text("Our Recepies Selections");
-  $(".typeone").text("High Carbs");
-  $(".typetwo").text("Low Carbs");
 });
 
 $(".upperleft").on("mouseenter", function() {
@@ -45,9 +42,6 @@ $(".upperright").on("click ", function() {
   );
   $(".benefits").text("Health Impact");
   $(".dietbenefits").text("Build muscle mass and tissue");
-  $(".ouroptions").text("Our Recepies Selections");
-  $(".typeone").text("High Protein");
-  $(".typetwo").text("Low Protein");
 });
 
 $(".upperright").on("mouseenter", function() {
@@ -69,8 +63,6 @@ $(".leftdown").on("click ", function() {
   );
   $(".benefits").text("Health Impact");
   $(".dietbenefits").text("Improve Health");
-  $(".ouroptions").text("Our Recepies Selections");
-  $(".typeone").text("Balanced Alternative");
 });
 
 $(".leftdown").on("mouseenter", function() {
@@ -92,9 +84,6 @@ $(".rightdown").on("click ", function() {
   );
   $(".benefits").text("Health Impact");
   $(".dietbenefits").text("Gain or lose weight");
-  $(".ouroptions").text("Our Recepies Selections");
-  $(".typeone").text("High Fat");
-  $(".typetwo").text("Low Fat");
 });
 
 $(".rightdown").on("mouseenter", function() {

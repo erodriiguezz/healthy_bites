@@ -21,11 +21,13 @@
     />
     <!-- Material Design Bootstrap -->
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.11.0/css/mdb.min.css"
       rel="stylesheet"
     />
+
     <!-- Optional CSS -->
     <link rel="stylesheet" href="../assets/styles/main.css" />
+    <link rel="stylesheet" href="../assets/styles/survey.css" />
 
     <title>Healthy Recipe</title>
   </head>
@@ -52,63 +54,141 @@
       </div>
     </nav>
 
-    <!--Get Started- Welcome-->
-    <div class="container my-5 py-5 z-depth-1">
-      <!--Section: Content-->
-      <section class="px-md-5 mx-md-5 dark-grey-text text-center text-lg-left">
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid column-->
-          <div
-            class="col-lg-6 mb-4 mb-lg-0 d-flex align-items-center justify-content-center"
-          >
-            <img src="../assets/images/survey.jpg" class="img-fluid" alt="" />
-          </div>
-          <!--Grid column-->
+    <!-- multistep form -->
+    <form id="msform">
+      <!-- <div class="form-container"> -->
+      <!-- progressbar -->
+      <!-- <ul id="progressbar">
+        <li class="active">Create Account</li>
+        <li>Select a Cuisine:</li>
+        <li>Select a Diet:</li>
+        <li>Select any Intolerances:</li>
+        <li>Exclude:</li>
+      </ul> -->
+      <!-- fieldsets -->
+      <!-- <fieldset>
+        <h2 class="fs-title">Create an account</h2>
 
-          <!--Grid column-->
-          <div class="col-lg-6 mb-4 mb-lg-0">
-            <h3 class="font-weight-bold">You're on the right path!</h3>
+        <input type="text" name="name" placeholder="Name" />
+        <input type="text" name="email" placeholder="Email" />
+        <input
+          type="button"
+          name="next"
+          class="next action-button"
+          value="Next"
+        />
+      </fieldset> -->
 
-            <br />
+      <fieldset>
+        <h2 class="fs-title">Select a Cuisine</h2>
 
-            <input
-              type="text"
-              style="width: 100%;"
-              id="user-name"
-              placeholder="let's get your name.."
-            />
-            <br />
-            <input
-              type="text"
-              style="width: 100%;"
-              id="user-email"
-              placeholder="email"
-            />
-            <br />
-            <h6>We won't share your information with anyone.</h6>
-            <button type="button" class="btn btn-amber" id="submit-name">
-              Take me to the next step!
-            </button>
-          </div>
-          <!--Grid column-->
+        <div class="user-options">
+          <a class="option-bttn cuisine">African</a>
+          <a class="option-bttn cuisine">American</a>
+          <a class="option-bttn cuisine">British</a>
+          <a class="option-bttn cuisine">Cajun</a>
+          <a class="option-bttn cuisine">Caribbean</a>
+          <a class="option-bttn cuisine">Chinese</a>
         </div>
-        <!--Grid row-->
-      </section>
-      <!--Section: Content-->
 
-      <!--Skip to recipes--- Can you make this stick to the bottom of the page even on scroll?-->
+        <!-- <input
+            type="button"
+            name="previous"
+            class="previous action-button"
+            value="Previous"
+          /> -->
+        <input
+          type="button"
+          name="next"
+          class="next action-button"
+          value="Next"
+        />
+      </fieldset>
 
-      <div class="alert alert-light give-me-recepies-bttn" role="alert">
-        <button type="button" class="btn btn-brown">
-          Just give me the recipes :(
-        </button>
-      </div>
-    </div>
+      <fieldset>
+        <h2 class="fs-title">Select a Diet</h2>
+
+        <div class="user-options">
+          <a class="option-bttn diet">vegetarian</a>
+          <a class="option-bttn diet">gluten free</a>
+          <a class="option-bttn diet">vegan</a>
+          <a class="option-bttn diet">ketogenic</a>
+          <a class="option-bttn diet">lacto-vegetarian</a>
+          <a class="option-bttn diet">ovo-vegetarian</a>
+          <a class="option-bttn diet">pesceterian</a>
+          <a class="option-bttn diet">paleo</a>
+          <a class="option-bttn diet">primal</a>
+          <a class="option-bttn diet">whole30</a>
+        </div>
+
+        <input
+          type="button"
+          name="previous"
+          class="previous action-button"
+          value="Previous"
+        />
+        <input
+          type="button"
+          name="next"
+          class="next action-button"
+          value="Next"
+        />
+      </fieldset>
+
+      <fieldset>
+        <h2 class="fs-title">Select any Intolerances</h2>
+        <div class="user-options">
+          <a class="option-bttn intolerance">Dairy</a>
+          <a class="option-bttn intolerance">Peanut</a>
+          <a class="option-bttn intolerance">Shellfish</a>
+          <a class="option-bttn intolerance">Grain</a>
+        </div>
+
+        <input
+          type="button"
+          name="previous"
+          class="previous action-button"
+          value="Previous"
+        />
+        <input
+          type="button"
+          name="next"
+          class="next action-button"
+          value="Next"
+        />
+      </fieldset>
+
+      <fieldset>
+        <h2 class="fs-title">Tell us what to exclude</h2>
+
+        <input type="text" />
+        <br />
+        <input
+          type="button"
+          name="previous"
+          class="previous action-button"
+          value="Previous"
+        />
+        <input
+          type="submit"
+          name="submit"
+          class="submit action-button"
+          value="Submit"
+        />
+      </fieldset>
+      <!-- </div> -->
+    </form>
+
+    <div class="container mt-5 recipes"></div>
 
     <!-- JQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!-- JQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    ></script>
     <!-- JQuery -->
     <script
       type="text/javascript"
@@ -127,11 +207,12 @@
     <!-- MDB core JavaScript -->
     <script
       type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/js/mdb.min.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.11.0/js/mdb.min.js"
     ></script>
 
     <!-- Optinal JS -->
-    <script type="text/javascript" src="assets/script/main.js"></script>
+    <script type="text/javascript" src="../assets/script/main.js"></script>
     <script type="text/javascript" src="../assets/script/style.js"></script>
+    <script type="text/javascript" src="../assets/script/survey.js"></script>
   </body>
 </html>

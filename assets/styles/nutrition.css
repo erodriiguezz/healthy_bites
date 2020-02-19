@@ -63,6 +63,10 @@ body > div > div.row > div:nth-child(5) {
   border-top-left-radius: 75%;
 }
 
+a {
+  float: left;
+}
+
 /* p {
   /*border: solid 1.5px rgb(243, 180, 7);*/
 /* align-items: center;
