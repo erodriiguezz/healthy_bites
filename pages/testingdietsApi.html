@@ -65,7 +65,7 @@
          "wheat",
         ];
 
-         $(lowCarbs).each(function (i, item) {
+         $(lowCarbs.slice(0,5)).each(function (i, item) {
 
         $("#lcdiet").on("click", function() {
           var search = item;
@@ -74,14 +74,15 @@
 
           $.ajax({
             url:
-              "https://api.edamam.com/search?q=" +
+              "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" +
               search +
-              "&app_id=" +
+              "&from=0&to=3&app_id=" +
               apiId +
               "&app_key=" +
               apiKey,
             method: "GET"
           }).then(function(response) {
+            console.log(response)
             /*console.log(response);
             $("#results").text(response.hits[0].recipe.url);
             $("img").attr("src", response.hits[1].recipe.image);
@@ -98,21 +99,7 @@
 
              var t = item.recipe.image;
 
-             $("#list")
-                .append("<div class='col-4' style='display:inline-block;'><img src='" + t + "'style='width: 200px'></div> ");
-     
-              $("#list")
-                .append("<div class='col-2' style='display:inline-block;'><h3> </div>")
-                .append(item.recipe.label);
-
-            
-
-              console.log(item.recipe.dietLabels);
-              console.log(item.recipe.ingredients);
-
-              console.log(item.recipe.label);
-              console.log(item.recipe.dietLabels);
-              console.log(item.recipe.ingredients);
+             $("#list").append("<div class='col-4' style='display:inline-block;'><a target='_blank' href='"+ item.recipe.url +"'><h5>"+item.recipe.label+"</h5></a><img src='" + t + "'style='width: 200px'><h6>"+item.recipe.healthLabels[0]+"</h6></div> ");
             });
           });
         });
@@ -124,7 +111,7 @@
         var highCarbs =["quinoa",
        "lentil", "chickpea", "beans", "pasta", "banana", "oats" ];
 
-        $(highCarbs).each(function (i, item) {
+        $(highCarbs.slice(0,5)).each(function (i, item) {
 
         $("#hcdiet").on("click", function() {
           var search = item;
@@ -133,14 +120,16 @@
 
           $.ajax({
             url:
-              "https://api.edamam.com/search?q=" +
+              "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" +
               search +
-              "&app_id=" +
+              "&from=0&to=3&app_id=" +
               apiId +
               "&app_key=" +
               apiKey,
             method: "GET"
           }).then(function(response) {
+
+            console.log(response)
             /*console.log(response);
             $("#results").text(response.hits[0].recipe.url);
             $("img").attr("src", response.hits[1].recipe.image);
@@ -157,24 +146,9 @@
 
              var t = item.recipe.image;
 
-             $("#list")
-                .append("<div class ='col-2'><img src='"+t+"'style='width: 200px'></div> ")
-                ;
 
-              $("#list")
-                .append("<h3>")
-                .append(item.recipe.label);
+             $("#list").append("<div class ='col-2' style='display:inline-block;>"+"<a target='_blank' href='"+ item.recipe.url +"'><h5>" +item.recipe.label + "</h5></a><img src='"+t+"'style='width: 200px'></div> ");
 
-              $("#list")
-                .append("<p>")
-                .append(item.recipe.dietLabels);
-
-              console.log(item.recipe.dietLabels);
-              console.log(item.recipe.ingredients);
-
-              console.log(item.recipe.label);
-              console.log(item.recipe.dietLabels);
-              console.log(item.recipe.ingredients);
             });
           });
         });
