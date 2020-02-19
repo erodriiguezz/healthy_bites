@@ -20,6 +20,8 @@ $(".upperleft").on("click ", function() {
   );
   $(".benefits").text("Health Impact");
   $(".dietbenefits").text("Energy  & Stamina ");
+
+  $(".dietBtns").attr("href", "pages/dietCarbs.html");
 });
 
 $(".upperleft").on("mouseenter", function() {
@@ -42,6 +44,8 @@ $(".upperright").on("click ", function() {
   );
   $(".benefits").text("Health Impact");
   $(".dietbenefits").text("Build muscle mass and tissue");
+
+  $(".dietBtns").attr("href", "pages/dietProtein.html");
 });
 
 $(".upperright").on("mouseenter", function() {
@@ -63,6 +67,8 @@ $(".leftdown").on("click ", function() {
   );
   $(".benefits").text("Health Impact");
   $(".dietbenefits").text("Improve Health");
+
+  $(".dietBtns").attr("href", "pages/dietBalance.html");
 });
 
 $(".leftdown").on("mouseenter", function() {
@@ -84,6 +90,8 @@ $(".rightdown").on("click ", function() {
   );
   $(".benefits").text("Health Impact");
   $(".dietbenefits").text("Gain or lose weight");
+
+  $(".dietBtns").attr("href", "pages/dietFats.html");
 });
 
 $(".rightdown").on("mouseenter", function() {

@@ -4,8 +4,31 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.11.0/css/mdb.min.css"
+      rel="stylesheet"
+    />
     <!-- Optional CSS -->
     <link rel="stylesheet" href="../assets/styles/main.css" />
+
+    <!-- Optional CSS -->
+    <link rel="stylesheet" href="../assets/styles/restaurants.css" />
 
     <title>Restaurants</title>
   </head>
@@ -32,16 +55,22 @@
       </div>
     </nav>
 
-    <div class="zomato">
-      <div class="search">
-        Search for your city
-        <div>
-          <input type="text" id="inputCity" placeholder="New York City" />
-          <input type="submit" id="submitBtn" />
+    <div class="container">
+      <div class="zomato">
+        <div class="search">
+          <h4>Search for your city</h4>
+          <div>
+            <input
+              type="text"
+              class="form-control"
+              id="inputCity"
+              placeholder="New York City"
+            />
+            <input type="submit" class="btn btn-dark" id="submitBtn" />
+          </div>
         </div>
       </div>
     </div>
-
     <!-- JQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -51,5 +80,15 @@
       src="../assets/script/restaurant.js"
     ></script>
     <script type="text/javascript" src="../assets/script/style.js"></script>
+
+    <!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.11.0/js/mdb.min.js"></script>
+
   </body>
 </html>
