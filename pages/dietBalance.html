@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.11.0/css/mdb.min.css" rel="stylesheet">
+  <!-- Optional CSS -->
+  <link rel="stylesheet" href="../assets/styles/main.css">
+  <link rel="stylesheet" href="../assets/styles/diet.css">
+
+  <title>Categories</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-contianer">
+          <h1><a href="../index.html">HEALTHY BITES</a></h1>
+          <div class="nav-bttn">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+          </div>
+          <div class="nav-items">
+                <ul>
+                    <li class="nav-link"><a href="survey.html">Customize</a></li>
+                    <li class="nav-link"><a href="recepies.html">Recipes</a></li>
+                    <li class="nav-link">
+                    <a href="#">Restaurants</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <!--<h3>Carb Diet Recepies</h3>-->
+        <!--<p>Eating well is fundamental to good health and well-being. Healthy eating helps us to maintain a healthy weight and
+        reduces our risk of type 2 diabetes, high blood pressure, high cholesterol and the risk of developing cardiovascular
+        disease and some cancers.</p>-->
+        <div class="row">
+            <div class="col-xl-5"><img
+            src="https://i.dietdoctor.com/wp-content/uploads/2018/01/LowCarbMobile.jpg?auto=compress%2Cformat&w=1200&h=709&fit=crop" width="450px"
+            alt=""></div>
+            <div class="col-lg-7">
+                <h3 class="g1 title">Balance Diet Recepies</h3>
+                <div class="g1 desc">Eating well is fundamental to good health and well-being. Healthy eating helps us to maintain a healthy weight and
+                    reduces our risk of type 2 diabetes, high blood pressure, high cholesterol and the risk of developing cardiovascular
+                    disease and some cancers.</div>
+                <button class="diet btn btn-outline-warning" style="width: 36rem;" id="lcdiet">Balance</button>
+            </div>
+            
+        </div>
+    </div>
+        <div>
+            <p id="results"></p>
+            <div id="list"></div>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../assets/script/style.js"></script>
+    <script src="../assets/script/dietBalance.js"></script>
+  </body>
+
+</html>
