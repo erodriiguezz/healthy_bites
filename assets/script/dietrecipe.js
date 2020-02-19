@@ -17,6 +17,8 @@ $(document).ready(function() {
       var apiKey = "941ba2d36d5029ddabc2f06718bb1611";
       var apiId = "8caae292";
 
+      $("#list").empty();
+
       $.ajax({
         url:
           "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" +
@@ -50,7 +52,7 @@ $(document).ready(function() {
               item.recipe.label +
               "</h5></a><img src='" +
               t +
-              "'style='width: 200px'><h6>" +
+              "'style='width: 180px'><h6>" +
               item.recipe.healthLabels[0] +
               "</h6></div> "
           );
@@ -76,6 +78,8 @@ $(document).ready(function() {
       var search = item;
       var apiKey = "941ba2d36d5029ddabc2f06718bb1611";
       var apiId = "8caae292";
+
+      $("#list").empty();
 
       $.ajax({
         url:
@@ -104,14 +108,15 @@ $(document).ready(function() {
           var t = item.recipe.image;
 
           $("#list").append(
-            "<div class ='col-2' style='display:inline-block;>" +
-              "<a target='_blank' href='" +
+            "<div class='col-4' style='display:inline-block;'><a target='_blank' href='" +
               item.recipe.url +
               "'><h5>" +
               item.recipe.label +
               "</h5></a><img src='" +
               t +
-              "'style='width: 200px'></div> "
+              "'style='width: 180px'><h6>" +
+              item.recipe.healthLabels[0] +
+              "</h6></div> "
           );
         });
       });

@@ -10,16 +10,18 @@ li {
 }
 
 h5 {
-  padding: 0px;
+  padding: 5px;
   margin-top: 0px;
+  font-size: 13px;
 }
 .col-4 {
   width: 210px;
-  padding: 10px;
+  margin: 10px;
   display: inline-block;
   border: solid 0.5px orange;
   border-radius: 9%;
   text-align: center;
+  box-shadow: 0.5px 0.5px 18px black;
 }
 img {
   border-radius: 9%;
@@ -34,4 +36,18 @@ a:hover {
 }
 h6 {
   margin: 0px;
+}
+.title {
+  margin-top: 25px;
+}
+.desc {
+  padding: 10px;
+  padding-left: 0px;
+}
+.diet {
+  margin-top: 35px;
+}
+
+.btn {
+  width: 18rem;
 }
