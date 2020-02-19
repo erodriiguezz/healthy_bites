@@ -64,7 +64,7 @@ $(document).ready(function() {
       diet +
       "&intolerances=" +
       intolerances +
-      "&number=2";
+      "&number=5";
     // &excludeIngredients="+exclude+"
 
     if (cuisine && diet && intolerances) {
