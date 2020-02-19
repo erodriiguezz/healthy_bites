@@ -18,7 +18,7 @@ h5 {
   border: solid 0.5px orange;
   border-radius: 9%;
   text-align: center;
-  box-shadow: 0.5px 0.5px 18px black;
+  box-shadow: 0.5px 0.5px 18px rgb(129, 129, 129);
 }
 img {
   border-radius: 9%;
